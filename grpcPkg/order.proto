@@ -1,0 +1,16 @@
+syntax = "proto3";
+package grpcPkg;
+
+message OrderRequest{
+  string order_id = 1;
+}
+
+message OrderResponse{
+  string order_id = 1;
+  string order_name = 2;
+  string order_status = 3;
+}
+
+service OrderService{
+  rpc GetOrder(OrderRequest) returns (OrderResponse);
+}

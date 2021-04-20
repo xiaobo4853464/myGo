@@ -1,0 +1,6 @@
+syntax="proto3";
+
+message Human{
+  string name=1;
+  int32 age=2;
+}
