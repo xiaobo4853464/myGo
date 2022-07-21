@@ -3,26 +3,26 @@ package main
 import "fmt"
 
 func main() {
-	var a =10
-	var p *int
+	var a = 10
+	var p *int // int 指针
 	fmt.Println(p)
-	p=&a
-	fmt.Println(&a) // a 的地址
-	fmt.Println(p) // p 的值 是 a 的地址
-	fmt.Println(*p) // p 的数字， 就是a 的值
-	fmt.Println(&p) // p 的地址
+	p = &a          //赋值要赋地址
+	fmt.Println(&a) // 打印a的地址
+	fmt.Println(p)  // 打印a的地址
+	fmt.Println(&p) // 打印p的地址，指针的地址
+	fmt.Println(*p) // 打印值，也就是a的值
 
-	a=11
+	a = 11
 
 	fmt.Println(a)
 	fmt.Println(*p)
 
 	fmt.Println("----------------")
 
-	b:=1
+	b := 1
 	var p2 *int
-	p2=&b
-	bb:=pFunc(p2)
+	p2 = &b
+	bb := pFunc(p2)
 	fmt.Println(bb)
 
 	//var arr1= [4]int{1,2,3,4}
@@ -40,9 +40,9 @@ func main() {
 
 }
 
-func pFunc(p *int)int{
+func pFunc(p *int) int {
 	fmt.Println(p)
-	s:=*p+1
+	s := *p + 1
 	fmt.Println(s)
 	return s
 }
