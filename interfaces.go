@@ -3,8 +3,13 @@ package main
 import "fmt"
 
 func main() {
+	/*
+		接口对象不能访问实现对象中的属性
+	*/
 	m := Mouse{name: "logic"}
+	f := FlashDisk{name: "samsung"}
 	testInterface(&m)
+	testInterface(&f)
 
 	// 结构嵌套
 	fmt.Println("------结构嵌套---------")
